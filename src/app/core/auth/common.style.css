@@ -1,0 +1,17 @@
+.side-image-container {
+  height: 750px;
+  width: 50%;
+}
+
+@media (max-width: 1200px) {
+  .side-image-container {
+    width: 25%;
+    height: 25%;
+  }
+}
+@media (max-width: 961px) {
+  .side-image-container {
+    width: 25%;
+    height: 25%;
+  }
+}

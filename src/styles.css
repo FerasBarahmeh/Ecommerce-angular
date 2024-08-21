@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+/** Start Html element */
+body {
+  min-height: 100vh;
+}
+button {
+  border-color: transparent;
+  outline: none;
+  border-radius: 4px;
+}
+button.disabled {
+  opacity: 0.5;
+  user-select: none;
+}
+button.disabled:hover {
+  opacity: 1;
+  background-color: var(--primary-btn);
+}
+li {
+  list-style: none;
+}
+input:focus {
+  outline: none;
+}
+ul {
+  margin: 0;
+}
+/** End Html element */
+
+.text {
+  color: var(--text);
+}
+.text-color-none {
+  color: transparent;
+}
+.pointer {
+  cursor: pointer;
+}
+.primary-btn {
+  background-color: var(--primary-btn) !important;
+  border: none;
+  color: var(--text);
+}
+.primary-btn:hover {
+  background-color: var(--primary-btn-hovered) !important;;
+}
+
+
+/* Inputs */
+.empty-input {
+  padding: 2px 5px 2px 0;
+  outline: none;
+  border: none;
+  border-bottom: 1.5px solid var(--bs-border-color-translucent);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .3s;
+  color: var(--primary-2);
+
+}
+.empty-input:focus {
+  border-bottom: 1.5px solid var(--secondary);
+}

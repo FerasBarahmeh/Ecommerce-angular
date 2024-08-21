@@ -1,0 +1,28 @@
+<div class="bg-transparent border d-flex justify-content-between align-items-center p-3">
+  <div>
+    Exclusive
+  </div>
+  <div>
+    <div class="d-flex gap-5">
+      <a href="#" routerLinkActive="active">Home</a>
+      <a href="#" routerLinkActive="active">Contact</a>
+      <a href="#" routerLinkActive="active">About As</a>
+      <a [routerLink]="'login'" routerLinkActive="active">login</a>
+
+    </div>
+  </div>
+  <div class="d-flex gap-5 mx-4 position-relative">
+    <div class="position-relative">
+      <input type="text" name="search" id="search" placeholder="What are you looking for?" class="m-0 px-2 py-1 border rounded" />
+      <div class="search-icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center gap-2">
+      <i class="fa fa-heart text-danger fa-lg pointer"></i>
+      <i class="fa fa-cart-shopping pointer fa-lg"></i>
+      <i class="fa fa-user fa-lg pointer"></i>
+    </div>
+  </div>
+</div>

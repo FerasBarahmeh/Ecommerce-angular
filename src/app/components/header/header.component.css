@@ -1,0 +1,16 @@
+.search-icon {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+a.active {
+  text-decoration: underline;
+}

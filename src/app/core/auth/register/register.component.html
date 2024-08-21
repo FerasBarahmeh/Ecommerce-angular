@@ -1,0 +1,82 @@
+<section class="mt-5 d-flex justify-content-between ">
+  <div class="side-image-container shadow-sm">
+    <img [src]="sideImage" alt="Side Image" class="img-fluid w-100 h-100"/>
+  </div>
+
+  <div class="w-25 mx-auto d-flex flex-column gap-5 justify-content-center align-items-center">
+    <div class="me-auto">
+      <h2>Register in to Exclusive</h2>
+      <span>Enter your derails below</span>
+
+    </div>
+    <form class="w-100" #LoginForm="ngForm">
+      <div class="d-flex flex-column gap-5">
+        <div class="w-100">
+          <label class="w-100">
+            <input
+              type="email"
+              ngModel
+              name="email"
+              #email="ngModel"
+              class="empty-input w-100"
+              placeholder="Enter your email"
+              required
+              autofocus
+            />
+          </label>
+          @if(email.invalid && email.dirty)
+          {
+            <error>Email filed is required</error>
+          }
+
+        </div>
+
+        <div class="position-relative">
+          <input
+            type="password"
+            ngModel
+            name="password"
+            #password="ngModel"
+            class="empty-input w-100"
+            required
+            minlength="4"
+            placeholder="Password"
+          />
+          @if(password.invalid && password.dirty)
+          {
+            <error>Minimum length 4 character</error>
+          }
+
+        </div>
+        <div class="position-relative">
+          <input
+            type="password"
+            ngModel
+            name="confirmPassword"
+            #confirmPassword="ngModel"
+            class="empty-input w-100"
+            required
+            minlength="4"
+            placeholder="Confirm password"
+          />
+          @if(confirmPassword.invalid && confirmPassword.dirty)
+          {
+            <error>Minimum length 4 character</error>
+          }
+
+        </div>
+
+      </div>
+    </form>
+    <div class="d-flex justify-content-between align-items-center w-100 mx-2">
+      <button
+
+        [disabled]="LoginForm.invalid"
+        class="primary-btn px-4 py-1 {{ LoginForm.invalid ? 'disabled' : ''}}"
+      >
+        Register
+      </button>
+      <a routerLink="/login" class="text-secondary">already has account?</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+/* Colors */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+
+
+  /* Primary Colors */
+  --primary: #FFFFFF;
+  --primary-2: #363738;
+
+  /* Secondary Colors */
+  --secondary: #DB4444;
+  --secondary-2: #FEFAF1;
+
+
+  /* Background */
+  --bg: #FFFFFF;
+
+  /* Text Colors */
+  --text: #FAFAFA;
+  --text-2: #7D8184;
+  --text-3: #000000;
+
+  /* Button */
+  --primary-btn: #DB4444;
+  --primary-btn-hovered: #E07575;
+
+  /* Opacity */
+  --opacity: 1px 30% ;
+
+  /* Shadow */
+  --drop-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 4px 0 rgba(0, 0, 0, 0.12);
+}
