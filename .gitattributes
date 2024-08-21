@@ -1,0 +1,42 @@
+# Set the default language for the repository
+* linguist-language=TypeScript
+
+# Define TypeScript files as text files
+*.ts text
+*.tsx text
+
+# Define HTML, CSS, SCSS, and other Angular-specific files as text files
+*.html text
+*.css text
+*.scss text
+*.sass text
+*.json text
+*.xml text
+*.yml text
+*.yaml text
+
+# Define other text-based files
+*.md text
+*.js text
+*.jsx text
+*.svg text
+
+# Define images as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+
+# Define fonts as binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+
+# Define Angular environments as text
+src/environments/* linguist-language=TypeScript
+
+# Mark large files or specific directories if needed (example)
+# /dist/* binary
