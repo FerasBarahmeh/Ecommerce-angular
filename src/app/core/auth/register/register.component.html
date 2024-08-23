@@ -9,73 +9,95 @@
       <span>Enter your derails below</span>
 
     </div>
-    <form class="w-100" #LoginForm="ngForm">
+    <form class="w-100" [formGroup]="registerForm">
       <div class="d-flex flex-column gap-5">
-        <div class="w-100">
+        <div class="position-relative w-100">
           <label class="w-100">
             <input
               type="email"
-              ngModel
               name="email"
-              #email="ngModel"
               class="empty-input w-100"
+              formControlName="email"
               placeholder="Enter your email"
-              required
               autofocus
             />
           </label>
-          @if(email.invalid && email.dirty)
-          {
-            <error>Email filed is required</error>
-          }
+
+          <errors
+            class="text-capitalize"
+            [fieldName]="'email'"
+            [hasErrors]="isNotValidField('email')"
+            [errorMessages]="getFieldErrors('email')"
+          />
+          <div class="position-absolute  end-0 top-0 none {{ registerForm.get('email')?.invalid ? 'd-none' : 'd-block' }}">
+            <i class="fa fa-check text-success"></i>
+          </div>
 
         </div>
 
         <div class="position-relative">
           <input
-            type="password"
-            ngModel
-            name="password"
-            #password="ngModel"
+            type="text"
+            name="username"
+            formControlName="username"
             class="empty-input w-100"
-            required
-            minlength="4"
+            placeholder="username"
+          />
+          <errors
+            class="text-capitalize"
+            [fieldName]="'username'"
+            [hasErrors]="isNotValidField('username')"
+            [errorMessages]="getFieldErrors('username')"
+          />
+          <div class="position-absolute  end-0 top-0 none {{ registerForm.get('username')?.invalid ? 'd-none' : 'd-block' }}">
+            <i class="fa fa-check text-success"></i>
+          </div>
+        </div>
+
+        <div class="position-relative">
+          <input
+            type="password"
+            name="password"
+            formControlName="password"
+            class="empty-input w-100"
             placeholder="Password"
           />
-          @if(password.invalid && password.dirty)
-          {
-            <error>Minimum length 4 character</error>
-          }
-
+          <errors
+            class="text-capitalize"
+            [fieldName]="'password'"
+            [hasErrors]="isNotValidField('password')"
+            [errorMessages]="getFieldErrors('password')"
+          />
+          <div class="position-absolute  end-0 top-0 none {{ registerForm.get('password')?.invalid ? 'd-none' : 'd-block' }}">
+            <i class="fa fa-check text-success"></i>
+          </div>
         </div>
+
         <div class="position-relative">
           <input
             type="password"
-            ngModel
             name="confirmPassword"
-            #confirmPassword="ngModel"
+            formControlName="confirmPassword"
             class="empty-input w-100"
-            required
-            minlength="4"
             placeholder="Confirm password"
           />
-          @if(confirmPassword.invalid && confirmPassword.dirty)
-          {
-            <error>Minimum length 4 character</error>
-          }
-
+          <errors
+            class="text-capitalize"
+            [fieldName]="'confirmPassword'"
+            [hasErrors]="isNotValidField('confirmPassword')"
+            [errorMessages]="getFieldErrors('confirmPassword')"
+          />
+          <div class="position-absolute  end-0 top-0 none {{ registerForm.get('confirmPassword')?.invalid ? 'd-none' : 'd-block' }}">
+            <i class="fa fa-check text-success"></i>
+          </div>
         </div>
 
       </div>
     </form>
     <div class="d-flex justify-content-between align-items-center w-100 mx-2">
-      <button
-
-        [disabled]="LoginForm.invalid"
-        class="primary-btn px-4 py-1 {{ LoginForm.invalid ? 'disabled' : ''}}"
-      >
+      <btn  [disabled]="registerForm.invalid" [class]="'px-4 py-1'" >
         Register
-      </button>
+      </btn>
       <a routerLink="/login" class="text-secondary">already has account?</a>
     </div>
   </div>

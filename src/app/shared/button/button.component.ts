@@ -6,19 +6,21 @@ import {VariantButtons} from "../../enums/variant-buttons";
   templateUrl: './button.component.html',
   styleUrl: './button.component.css'
 })
-export class ButtonComponent {
+export class ButtonComponent
+{
   @Input() label: string = '';
   @Input() type: string = 'submit';
   @Input() disabled: boolean = false;
   @Input() variant: VariantButtons = VariantButtons.Primary;
   @Input() class: string = '';
 
-  setButtonClass(): string {
-
+  public setButtonClass(): string
+  {
     return `btn ${this.getVariantButtonName()} text ${this.class} ${this.disabled ? 'btn-disabled' : ''} `;
   }
 
-  private getVariantButtonName(): string {
+  private getVariantButtonName(): string
+  {
     switch (this.variant) {
       case VariantButtons.Primary:
         return 'button-primary';

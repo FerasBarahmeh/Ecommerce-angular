@@ -5,7 +5,7 @@ import {SharedModule} from "../../../shared/shared.module";
 import {NgForm} from "@angular/forms";
 import {JsonPipe} from "@angular/common";
 import {AuthService} from "../../../services/auth/auth.service";
-import {ILogin} from "../../../interfaces/ILogin";
+import {ILogin} from "../../../interfaces/DTOs/ILogin";
 
 @Component({
   selector: 'app-login',

@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {ILogin} from "../../interfaces/ILogin";
+import {ILogin} from "../../interfaces/DTOs/ILogin";
 
 @Injectable({
   providedIn: 'root'

@@ -1,0 +1,7 @@
+@if (hasErrors)
+{
+  @for ( message of errorMessages; track $index)
+  {
+    <error> {{  message }}</error>
+  }
+}

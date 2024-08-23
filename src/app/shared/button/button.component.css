@@ -8,6 +8,7 @@
 .button-primary {
   background-color: var(--primary-btn) !important;
   border-color: var(--primary-btn-hovered) !important;
+  color: var(--text) !important;
 }
 
 .button-primary:hover {
